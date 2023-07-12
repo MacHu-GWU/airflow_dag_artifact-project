@@ -63,8 +63,8 @@ class AWSMWAA:
         )
         artifact = dag_artifact.put_artifact(metadata=metadata, tags=tags)
         content = artifact.s3path.read_text()
-        before = f'dag_id="{dag_id}"'
-        after = f'dag_id="{dag_id}_latest"'
+        before = f'dag_id = "{dag_id}"'
+        after = f'dag_id = "{dag_id}_latest"'
         if before not in content:
             raise ValueError
         content = content.replace(before, after)
@@ -81,8 +81,8 @@ class AWSMWAA:
         )
         artifact = dag_artifact.publish_artifact_version()
         content = artifact.s3path.read_text()
-        before = f'dag_id="{dag_id}"'
-        after = f'dag_id="{dag_id}_v{artifact.version}"'
+        before = f'dag_id = "{dag_id}"'
+        after = f'dag_id = "{dag_id}_v{artifact.version}"'
         if before not in content:
             raise ValueError
         content = content.replace(before, after)
