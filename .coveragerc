@@ -1,0 +1,28 @@
+# Coverage.py is a tool for measuring code coverage of Python programs.
+# for more info: https://coverage.readthedocs.io/en/latest/config.html
+[run]
+omit =
+    airflow_dag_artifact/docs/*
+    airflow_dag_artifact/tests/*
+    airflow_dag_artifact/vendor/*
+    airflow_dag_artifact/_version.py
+    airflow_dag_artifact/cli.py
+    airflow_dag_artifact/paths.py
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+
+    # Don't complain about missing debug-only code:
+    def __repr__
+    if self\.debug
+
+    # Don't complain if tests don't hit defensive assertion code:
+    raise AssertionError
+    raise NotImplementedError
+
+    # Don't complain if non-runnable code isn't run:
+    if 0:
+    if __name__ == .__main__.:
