@@ -5,6 +5,7 @@ from airflow_dag_artifact import api
 
 def test():
     _ = api
+    _ = api.AirflowDagArtifact
 
 
 if __name__ == "__main__":

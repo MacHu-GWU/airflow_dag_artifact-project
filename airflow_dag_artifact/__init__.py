@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-Package Description.
+Airflow Dag Artifact versioning and alias Management for blue/green, canary deployment, and roll back for production failure.
 """
 
 from ._version import __version__
 
-__short_description__ = "Package short description."
+__short_description__ = "Airflow Dag Artifact versioning and alias Management for blue/green, canary deployment, and roll back for production failure."
 __license__ = "MIT"
 __author__ = "Sanhe Hu"
 __author_email__ = "husanhe@gmail.com"
