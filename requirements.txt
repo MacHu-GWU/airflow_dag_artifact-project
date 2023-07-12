@@ -1,1 +1,4 @@
 # Core dependencies goes here
+boto3
+s3pathlib>=2.0.1,<3.0.0
+versioned>=0.4.2,<1.0.0
