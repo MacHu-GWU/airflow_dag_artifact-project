@@ -1,5 +1,5 @@
 
-.. image:: https://readthedocs.org/projects/airflow-dag-artifact/badge/?version=latest
+.. .. image:: https://readthedocs.org/projects/airflow-dag-artifact/badge/?version=latest
     :target: https://airflow-dag-artifact.readthedocs.io/en/latest/
     :alt: Documentation Status
 
@@ -26,10 +26,10 @@
 
 ------
 
-.. image:: https://img.shields.io/badge/Link-Document-blue.svg
+.. .. image:: https://img.shields.io/badge/Link-Document-blue.svg
     :target: https://airflow-dag-artifact.readthedocs.io/en/latest/
 
-.. image:: https://img.shields.io/badge/Link-API-blue.svg
+.. .. image:: https://img.shields.io/badge/Link-API-blue.svg
     :target: https://airflow-dag-artifact.readthedocs.io/en/latest/py-modindex.html
 
 .. image:: https://img.shields.io/badge/Link-Install-blue.svg
@@ -50,7 +50,15 @@
 
 Welcome to ``airflow_dag_artifact`` Documentation
 ==============================================================================
-Documentation for ``airflow_dag_artifact``.
+A lot of serverless AWS Service supports versioning and alias for deployment. It made the blue / green deployment, canary deployment and rolling back super easy.
+
+- `AWS Lambda Versioning and Alias <https://docs.aws.amazon.com/lambda/latest/dg/configuration-versions.html>`_
+- `AWS StepFunction Versioning and Alias <https://docs.aws.amazon.com/step-functions/latest/dg/auth-version-alias.html>`_
+- `AWS SageMaker Model Registry Versioning <https://docs.aws.amazon.com/sagemaker/latest/dg/model-registry.html>`_
+
+However, Airflow DAG does not support this feature yet. This library provides a way to manage Airflow DAG versioning and alias so you can deploy Airflow DAG with confidence.
+
+Please `read this tutorial <https://github.com/MacHu-GWU/airflow_dag_artifact-project/blob/main/examples/deploy_versioned_airflow_dag_artifacts.ipynb>`_ to learn how to use this library.
 
 
 .. _install:
