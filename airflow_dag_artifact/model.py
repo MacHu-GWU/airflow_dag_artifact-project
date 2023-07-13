@@ -23,7 +23,7 @@ PT = T.Union[str, _Path, Path]
 @dataclasses.dataclass
 class Base:
     """
-    Base class for AWS Glue artifact.
+    Base class for Airflow DAG artifact.
     """
 
     aws_region: str = dataclasses.field()
@@ -57,6 +57,14 @@ class Base:
     ):
         """
         Create the required S3 bucket and DynamoDB table for the artifact store backend.
+
+        It also setup the underlying S3 and DynamoDB client session for
+        ``put_artifact``, ``put_artifact_version`` methods. You should always
+        call this method at begin of your program
+
+        .. note::
+
+            This operation is idempotent.
         """
         self.repo.bootstrap(
             bsm=bsm,
