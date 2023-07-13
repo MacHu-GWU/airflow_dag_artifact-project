@@ -6,7 +6,7 @@ AWS MWAA. The DAG deployment in AWS MWAA is just uploading the DAG Python script
 to s3://my-mwaa-bucket/prefix/dags/`` folder. This module uses a custom S3 folder
 to store the versioned artifact and copy them to the MWAA DAG folder for deployment.
 
-See: 
+Usage: see https://github.com/MacHu-GWU/airflow_dag_artifact-project/blob/main/examples/aws_mwaa.py
 """
 
 import typing as T

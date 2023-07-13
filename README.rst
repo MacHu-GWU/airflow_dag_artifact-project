@@ -60,6 +60,8 @@ However, Airflow DAG does not support this feature yet. This library provides a 
 
 Please `read this tutorial <https://github.com/MacHu-GWU/airflow_dag_artifact-project/blob/main/examples/deploy_versioned_airflow_dag_artifacts.ipynb>`_ to learn how to use this library.
 
+It also has native `AWS MWAA <https://aws.amazon.com/managed-workflows-for-apache-airflow/>`_ support for DAG deployment automation, with the DAG versioning manage, which is not official supported by Apache Airflow. Please `read this example <https://github.com/MacHu-GWU/airflow_dag_artifact-project/blob/main/examples/aws_mwaa.py>`_ to learn how to use this library with AWS MWAA.
+
 
 .. _install:
 
